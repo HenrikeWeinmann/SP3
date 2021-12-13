@@ -28,8 +28,15 @@ class Sp3:
         print("conversion successful")
 
     def comparison(self):
+        os.system("ffmpeg -i VP8/360x240.webm -i VP9/360x240_VP9.webm -filter_complex hstack VP8_VP9_compare.mp4")
         print("that")
-
+    '''
+    to be honest, I can't really tell a difference...
+    '''
+    def livestream(self):
+        pass
 
 sp3 = Sp3()
-Sp3.convert(sp3)
+#Sp3.convert(sp3)
+Sp3.comparison(sp3)
+Sp3.livestream(sp3)
